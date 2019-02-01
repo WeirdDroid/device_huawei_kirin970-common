@@ -259,4 +259,36 @@
          1 - The device DOES have a permanent menu key; ignore autodetection.
          2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
     <integer name="config_overrideHasPermanentMenuKey">2</integer>
+
+    <!-- Determines whether the device supports fingerprint navigation -->
+    <bool name="config_supportsFingerprintNavigation">true</bool>
+
+    <!-- Descriptor: Path to the vendors biometrics hal, required to send commands.
+         TransactionId: The transaction id required to send to the biometrics hal. -->
+    <string name="config_BiometricTransactorDescriptor" translatable="false">vendor.huawei.hardware.biometrics.fingerprint@2.1::IExtBiometricsFingerprint</string>
+    <integer name="config_BiometricTransactorTransactionId">20</integer>
+
+    <!-- Key codes of fingerprint gestures. If the gesture is not supported set it to 0. -->
+    <integer name="config_fpSingleTapKeyCode">174</integer>
+    <integer name="config_fpSwipeLeftKeyCode">105</integer>
+    <integer name="config_fpSwipeRightKeyCode">106</integer>
+    <integer name="config_fpLongpressKeyCode">28</integer>
+
+    <!-- Default settings for gestures
+                0 - Disabled
+                1 - Toggle flashlight
+                2 - Toggle airplane mode
+                3 - Play/Pause music
+                4 - Next music
+                5 - Previous music
+                6 - Take screenshot
+                7 - Assistant
+                8 - Home Button
+                9 - Back Button
+                10 - AppSwitch
+                11 - Wake device -->
+    <integer name="config_fpSingleTapDefault">8</integer>
+    <integer name="config_fpSwipeLeftDefault">9</integer>
+    <integer name="config_fpSwipeRightDefault">10</integer>
+    <integer name="config_fpLongpressDefault">7</integer>
 </resources>
